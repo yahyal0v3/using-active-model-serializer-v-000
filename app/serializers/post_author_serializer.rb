@@ -1,3 +1,4 @@
 class PostAuthorSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title, :description
+  belongs_to :author, serializer: PostAuthorSerializer
 end
